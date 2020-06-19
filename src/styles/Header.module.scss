@@ -1,0 +1,36 @@
+.app__header {
+  margin-top: 1.8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.menu__items {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.menu__menu_item {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
+
+.menu_item__link {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  padding: 0.3rem 0.8rem;
+  border-radius: 0.3rem;
+
+  opacity: 0.8;
+  background-color: inherit;
+
+  transition: all 200ms ease-in-out;
+}
+
+.menu_item__link:hover {
+  opacity: 1;
+  background-color: #3a3e50;
+}

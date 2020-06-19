@@ -1,0 +1,86 @@
+.movie_details__wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.details__back_button {
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  background: transparent;
+  padding: 0.3rem 1rem 0.3rem 0;
+}
+
+.details__back {
+  font-size: 2.5rem;
+  color: #7a8b99;
+}
+
+.minor_details {
+  color: #7a8b99;
+  font-size: 1.2rem;
+}
+
+.minor_details span:not(:last-child)::after {
+  content: "·";
+  padding-left: 0.3rem;
+}
+
+.minor_details__rated {
+  font-size: 1rem;
+  padding: 0.2rem;
+  background-color: #7a8b99;
+  color: #252733;
+  border-radius: 0.3rem;
+}
+
+.movie_title {
+  margin: 1.8rem 0;
+  font-size: 4rem;
+}
+
+.movie_rating > * {
+  font-size: 1.1rem;
+  border-radius: 0.3rem;
+  border: 1px solid #7a8b99;
+  padding: 0.2rem 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.favorite_button {
+  color: #7a8b99;
+  cursor: pointer;
+  outline: none;
+  background: transparent;
+}
+
+.movie_plot {
+  margin: 2rem 0;
+}
+
+.other_details {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.other_details__title {
+  color: #7a8b99;
+  margin-bottom: 0.5rem;
+}
+
+.detail_item__detail_list {
+  list-style-type: none;
+}
+
+.other_details__detail_item {
+  display: inline-block;
+  margin-right: 2.5rem;
+}
+
+.details__movie_poster {
+  margin: 0 5rem;
+  box-shadow: rgba(15, 17, 21, 0.35) 0px 6px 9px 0px;
+  border-radius: 0.4rem;
+}

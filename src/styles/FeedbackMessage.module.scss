@@ -1,0 +1,23 @@
+.feedback__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+
+  .feedback {
+    margin: 0 0 2em;
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    padding: 1em;
+    margin: 0 auto 1em;
+    display: inline-block;
+    vertical-align: top;
+
+    & svg path,
+    & svg rect {
+      fill: #cecece;
+    }
+  }
+}

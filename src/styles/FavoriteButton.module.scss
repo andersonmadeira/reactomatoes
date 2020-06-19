@@ -1,0 +1,29 @@
+.movie__favorite_icon {
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  color: #cecece;
+  background: transparent;
+}
+
+.movie__favorite_icon__favorite {
+  color: red;
+
+  .favorite_icon__icon {
+    fill: red;
+  }
+
+  &.movie__favorite_icon__labeled {
+    background-color: #cecece;
+  }
+}
+
+.favorite_icon__icon {
+  fill: #fff;
+  font-size: 1.8rem;
+}
+
+.favorite_icon__label {
+  padding-left: 0.3rem;
+  font-size: 1.2rem;
+}

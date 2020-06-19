@@ -1,0 +1,58 @@
+.content__movie_list {
+  display: grid;
+  grid-template-columns: repeat(5, 200px);
+  justify-content: center;
+  column-gap: 1.3rem;
+  row-gap: 1.3rem;
+  flex-wrap: wrap;
+  padding: 40px 0;
+  width: 100%;
+}
+
+.movie_list__movie {
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  margin: 0.5rem;
+  box-shadow: rgba(15, 17, 21, 0.35) 0px 6px 9px 0px;
+}
+
+.movie__poster {
+  height: 280px;
+}
+
+.movie__poster img {
+  width: auto;
+  height: 100%;
+}
+
+.scalable {
+  position: relative;
+  display: inline-block;
+  opacity: 0.8;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.scalable::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.scalable:hover {
+  -webkit-transform: scale(1.25, 1.25);
+  transform: scale(1.25, 1.25);
+  opacity: 1;
+}
+
+.scalable:hover::after {
+  opacity: 1;
+}
