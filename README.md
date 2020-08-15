@@ -1,15 +1,15 @@
 ## 🍅🎥 reactomatoes-web
 
-front para o reactomatoes
+web project for reactomatoes
 
-## Executar
+## Running
 
-Primeiro instale as dependências:
+First install all dependencies:
 
 `npm install`
 
-Assegure-se de que o endereço local da api consta no arquivo `.env` para que o front possa acessar a api.
+Then make sure the url for the api is correctly set inside the .env file so that this project will have access to the api endpoints
 
-Então rode a aplicação:
+And then just run the application:
 
 `npm start`
