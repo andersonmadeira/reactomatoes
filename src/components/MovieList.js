@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import classnames from 'classnames'
-import styles from '../styles/MovieList.module.scss'
 import FavoriteButton from './FavoriteButton'
 import { StateContext } from '../state'
+import styles from '../styles/MovieList.module.scss'
 
 const MovieList = ({ movies }) => {
   const {

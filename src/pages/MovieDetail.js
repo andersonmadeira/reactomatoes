@@ -3,10 +3,9 @@ import { useParams, useHistory } from 'react-router-dom'
 import styles from '../styles/MovieDetail.module.scss'
 import { fetchMovieById } from '../services/api'
 import FeedbackMessage from '../components/FeedbackMessage'
-import LoadingSpinnerIcon from '../components/LoadingSpinnerIcon'
-import WarningIcon from '../components/WarningIcon'
 import { StateContext } from '../state'
 import FavoriteButton from '../components/FavoriteButton'
+import { WarningIcon, LoadingIcon } from '../Icons'
 
 const MovieDetails = () => {
   const {
@@ -106,7 +105,7 @@ const MovieDetails = () => {
   ) : error ? (
     <FeedbackMessage icon={<WarningIcon />} label={error.message} />
   ) : isLoading ? (
-    <FeedbackMessage icon={<LoadingSpinnerIcon />} label="Loading data..." />
+    <FeedbackMessage icon={<LoadingIcon />} label="Loading data..." />
   ) : null
 }
 

@@ -4,9 +4,8 @@ import SearchInput from '../components/SearchInput'
 import MovieList from '../components/MovieList'
 import { useDebounce, useQuery } from '../hooks'
 import FeedbackMessage from '../components/FeedbackMessage'
-import LoadingSpinnerIcon from '../components/LoadingSpinnerIcon'
-import WarningIcon from '../components/WarningIcon'
 import { fetchMovies } from '../services/api'
+import { LoadingIcon, WarningIcon } from '../Icons'
 
 const Home = () => {
   const queryParams = useQuery()
@@ -36,13 +35,13 @@ const Home = () => {
     <>
       <SearchInput value={searchTerm} onChange={(term) => setSearchTerm(term)} />
       {isLoading ? (
-        <FeedbackMessage
-          data-testid="loading"
-          icon={<LoadingSpinnerIcon />}
-          label="Loading data..."
-        />
+        <FeedbackMessage data-testid="loading" icon={<LoadingIcon />} label="Loading data..." />
       ) : error ? (
-        <FeedbackMessage data-testid="error" icon={<WarningIcon />} label={error.message} />
+        <FeedbackMessage
+          data-testid="error"
+          icon={<WarningIcon width="3rem" height="3rem" />}
+          label={error.message}
+        />
       ) : movies.length === 0 ? (
         <FeedbackMessage label="No movies to display. Try searching by typing the input box above." />
       ) : (

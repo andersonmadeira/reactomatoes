@@ -1,16 +1,15 @@
 import React from 'react'
 
-const LoadingSpinnerIcon = ({ className }) => (
+const LoadingIcon = ({ className, style, width = '3rem', height = '3rem' }) => (
   <svg
     className={className}
-    version="1.1"
-    xmlns="http://www.w3.org/2000/svg"
     x="0px"
     y="0px"
-    width="3rem"
-    height="3rem"
+    width={width}
+    height={height}
+    data-icon="loading"
     viewBox="0 0 40 40"
-    style={{ enableBackground: 'new 0 0 50 50' }}
+    style={{ enableBackground: 'new 0 0 50 50', ...style }}
     xmlSpace="preserve"
   >
     <path
@@ -38,4 +37,4 @@ const LoadingSpinnerIcon = ({ className }) => (
   </svg>
 )
 
-export default LoadingSpinnerIcon
+export default React.memo(LoadingIcon)
