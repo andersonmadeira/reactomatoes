@@ -1,16 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter } from 'react-router-dom'
-import './index.scss'
+import { HashRouter as Router } from 'react-router-dom'
 import App from './App'
 import { StateProvider } from './state'
+import './index.scss'
 
 ReactDOM.render(
   <React.StrictMode>
     <StateProvider>
-      <BrowserRouter>
+      <Router>
         <App />
-      </BrowserRouter>
+      </Router>
     </StateProvider>
   </React.StrictMode>,
   document.getElementById('root')

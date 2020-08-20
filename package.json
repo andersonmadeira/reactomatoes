@@ -1,5 +1,7 @@
 {
   "name": "reactomatoes-front",
+  "description": "Reactomatoes - A directory for movies",
+  "homepage": "https://andersonmadeira.github.io/reactomatoes/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -16,6 +18,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -43,6 +47,7 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^2.5.1",
+    "gh-pages": "^3.1.0",
     "node-sass": "^4.14.1",
     "prettier": "^2.0.5"
   }
