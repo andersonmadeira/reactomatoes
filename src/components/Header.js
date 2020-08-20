@@ -9,7 +9,10 @@ const Header = () => {
         <span role="img" aria-label="Tomato icon">
           🍅
         </span>
-        &nbsp; Reactomatoes
+        &nbsp;
+        <Link to="/" className={styles.header__title__link}>
+          Reactomatoes
+        </Link>
       </h1>
       <nav className={styles.header__menu}>
         <ul className={styles.menu__items}>

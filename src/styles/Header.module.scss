@@ -5,6 +5,19 @@
   justify-content: space-between;
 }
 
+.header__title__link {
+  text-decoration: none;
+  color: inherit;
+
+  opacity: 0.8;
+
+  transition: all 200ms ease-in-out;
+}
+
+.header__title__link:hover {
+  opacity: 1;
+}
+
 .menu__items {
   list-style-type: none;
   display: flex;
