@@ -5,7 +5,12 @@ import styles from '../styles/Header.module.scss'
 const Header = () => {
   return (
     <header className={styles.app__header}>
-      <h1 className={styles.header__title}>Reactomatoes</h1>
+      <h1 className={styles.header__title}>
+        <span role="img" aria-label="Tomato icon">
+          🍅
+        </span>
+        &nbsp; Reactomatoes
+      </h1>
       <nav className={styles.header__menu}>
         <ul className={styles.menu__items}>
           <li className={styles.menu__menu_item}>

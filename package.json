@@ -1,8 +1,8 @@
 {
-  "name": "reactomatoes-front",
-  "description": "Reactomatoes - A directory for movies",
+  "name": "reactomatoes",
+  "description": "Search for movies and save a list of your favorites",
   "homepage": "https://andersonmadeira.github.io/reactomatoes/",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
