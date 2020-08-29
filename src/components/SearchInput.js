@@ -11,9 +11,7 @@ const SearchInput = ({ value, onChange }) => {
 
   return (
     <div className={styles.search}>
-      <span className={styles.search__icon}>
-        <SearchIcon width="1.5rem" height="1.5rem" />
-      </span>
+      <SearchIcon className={styles.search__icon} />
       <input
         data-testid="search-input"
         className={styles.search__input}

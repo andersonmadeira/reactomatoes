@@ -5,7 +5,7 @@ import { actionFavoriteAdd, actionFavoriteRemove } from '../state/action-creator
 import { HeartFilledIcon, HeartIcon } from '../Icons'
 import styles from '../styles/FavoriteButton.module.scss'
 
-const FavoriteButton = ({ movie, favorite, label, style, iconSize = '1rem' }) => {
+const FavoriteButton = ({ movie, favorite, label, style, iconClassName }) => {
   const { dispatch } = useContext(StateContext)
   const [isFavorite, setIsFavorite] = useState(favorite)
 
@@ -31,13 +31,9 @@ const FavoriteButton = ({ movie, favorite, label, style, iconSize = '1rem' }) =>
       }}
     >
       {isFavorite ? (
-        <HeartFilledIcon
-          className={styles.favorite_icon__icon}
-          width={iconSize}
-          height={iconSize}
-        />
+        <HeartFilledIcon className={classnames(iconClassName, styles.favorite_icon__icon)} />
       ) : (
-        <HeartIcon className={styles.favorite_icon__icon} width={iconSize} height={iconSize} />
+        <HeartIcon className={classnames(iconClassName, styles.favorite_icon__icon)} />
       )}
       <span className={styles.favorite_icon__label}>{label}</span>
     </button>

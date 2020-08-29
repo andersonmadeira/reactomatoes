@@ -39,7 +39,7 @@ const Home = () => {
       ) : error ? (
         <FeedbackMessage
           data-testid="error"
-          icon={<WarningIcon width="3rem" height="3rem" />}
+          icon={<WarningIcon style={{ width: '3rem', height: '3rem' }} />}
           label={error.message}
         />
       ) : movies.length === 0 ? (

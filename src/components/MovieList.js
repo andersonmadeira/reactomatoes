@@ -28,13 +28,7 @@ const MovieList = ({ movies }) => {
             </Link>
           </figure>
           <FavoriteButton
-            style={{
-              opacity: 0.8,
-              position: 'absolute',
-              top: 'calc(50% - 3rem)',
-              left: 'calc(50% - 3rem)',
-            }}
-            iconSize="6rem"
+            iconClassName={styles.movie__favorite_icon}
             movie={m}
             favorite={favorites.find((m2) => m.imdbID === m2.imdbID) !== undefined}
           />

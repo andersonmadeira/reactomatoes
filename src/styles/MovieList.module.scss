@@ -26,6 +26,33 @@
   width: 100%;
 }
 
+.movie__favorite_icon {
+  position: absolute;
+  width: 6rem;
+  height: 6rem;
+  top: calc(50% - 3rem);
+  left: calc(50% - 3rem);
+  opacity: 0.8;
+}
+
+@media (min-width: 375px) {
+  .movie__favorite_icon {
+    width: 8rem;
+    height: 8rem;
+    top: calc(50% - 4rem);
+    left: calc(50% - 4rem);
+  }
+}
+
+@media (min-width: 425px) {
+  .movie__favorite_icon {
+    width: 10rem;
+    height: 10rem;
+    top: calc(50% - 5rem);
+    left: calc(50% - 5rem);
+  }
+}
+
 // @media (min-width: 425px) {
 //   .content__movie_list {
 //     display: grid;
