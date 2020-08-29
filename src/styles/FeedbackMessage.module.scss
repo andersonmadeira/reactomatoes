@@ -1,11 +1,11 @@
-.feedback__container {
+.feedback {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
 
-  .feedback {
+  .feedback__icon {
     margin: 0 0 2em;
     height: 50px;
     width: 100px;
@@ -19,5 +19,9 @@
     & svg rect {
       fill: #cecece;
     }
+  }
+
+  .feedback__label {
+    text-align: center;
   }
 }

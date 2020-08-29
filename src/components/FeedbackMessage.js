@@ -3,9 +3,9 @@ import styles from '../styles/FeedbackMessage.module.scss'
 
 const FeedbackMessage = ({ icon, label }) => {
   return (
-    <div className={styles.feedback__container}>
-      <div className={styles.feedback}>{icon}</div>
-      <span>{label}</span>
+    <div className={styles.feedback}>
+      {icon && <div className={styles.feedback__icon}>{icon}</div>}
+      <span className={styles.feedback__label}>{label}</span>
     </div>
   )
 }

@@ -10,7 +10,7 @@ const SearchInput = ({ value, onChange }) => {
   }, [value])
 
   return (
-    <div className={styles.content__search}>
+    <div className={styles.search}>
       <span className={styles.search__icon}>
         <SearchIcon width="1.5rem" height="1.5rem" />
       </span>

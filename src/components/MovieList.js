@@ -12,7 +12,7 @@ const MovieList = ({ movies }) => {
   const movieItemClassnames = classnames(styles.movie_list__movie, styles.scalable)
 
   return (
-    <ul className={styles.content__movie_list}>
+    <ul className={styles.movie_list}>
       {movies.map((m) => (
         <li key={m.imdbID} className={movieItemClassnames}>
           <figure className={styles.movie__poster}>
