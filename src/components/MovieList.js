@@ -21,7 +21,7 @@ const MovieList = ({ movies }) => {
                 src={
                   m.Poster !== 'N/A'
                     ? m.Poster
-                    : 'https://via.placeholder.com/190x280/2F3240/CECECE/?text=Poster%20N/A'
+                    : 'https://via.placeholder.com/300x420/2F3240/CECECE/?text=Poster%20N/A'
                 }
                 alt={m.Title}
               />
