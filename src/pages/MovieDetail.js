@@ -6,6 +6,7 @@ import FeedbackMessage from '../components/FeedbackMessage'
 import { StateContext } from '../state'
 import FavoriteButton from '../components/FavoriteButton'
 import { WarningIcon, LoadingIcon } from '../Icons'
+import BackIcon from '../Icons/BackIcon'
 
 const MovieDetails = () => {
   const {
@@ -37,7 +38,9 @@ const MovieDetails = () => {
           className={styles.details__back_button}
           onClick={() => history.goBack()}
         >
-          <span className={styles.details__back}>🡐</span>
+          <span className={styles.details__back}>
+            <BackIcon className={styles.movie_details__back_icon} width="1rem" height="1rem" />
+          </span>
         </button>
         <div className={styles.minor_details}>
           <span className={styles.minor_details__runtime}>{movieData.Runtime}</span>
@@ -52,8 +55,17 @@ const MovieDetails = () => {
                 {rating.Value}
               </span>
             ))}
-          <FavoriteButton movie={movieData} favorite={isFavorite} label="Add to favorites" />
         </div>
+        <figure className={styles.details__movie_poster}>
+          <img
+            src={
+              movieData.Poster !== 'N/A'
+                ? movieData.Poster
+                : 'https://via.placeholder.com/190x280/2F3240/CECECE/?text=Poster%20N/A'
+            }
+            alt={movieData.Title}
+          />
+        </figure>
         <div className={styles.movie_plot}>
           <h3 className={styles.other_details__title}>Plot</h3>
           <p>{movieData.Plot}</p>
@@ -91,16 +103,6 @@ const MovieDetails = () => {
           </div>
         </div>
       </div>
-      <figure className={styles.details__movie_poster}>
-        <img
-          src={
-            movieData.Poster !== 'N/A'
-              ? movieData.Poster
-              : 'https://via.placeholder.com/190x280/2F3240/CECECE/?text=Poster%20N/A'
-          }
-          alt={movieData.Title}
-        />
-      </figure>
     </div>
   ) : error ? (
     <FeedbackMessage icon={<WarningIcon />} label={error.message} />
