@@ -1,11 +1,12 @@
 .app__header {
-  margin-top: 1rem;
+  margin: 1rem 0 1.5rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .header__title {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .header__title__link {
@@ -13,28 +14,10 @@
   text-decoration: none;
 }
 
-.menu__items {
-  margin: 0.5rem 0;
-  list-style-type: none;
-  display: flex;
-  justify-content: space-around;
-}
-
-.menu__menu_item {
-  font-size: 1.2rem;
-}
-
-.menu_item__link {
-  display: inline-block;
-  text-decoration: none;
+.header__favorites_link {
+  font-size: 1.5rem;
   color: inherit;
-  padding: 0.5rem 0.8rem;
-  border-radius: 0.3rem;
-
-  opacity: 0.8;
-  background-color: inherit;
-
-  transition: all 200ms ease-in-out;
+  text-decoration: none;
 }
 
 // .header__title__link {

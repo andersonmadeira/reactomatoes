@@ -17,7 +17,7 @@ const SearchInput = ({ value, onChange }) => {
         className={styles.search__input}
         type="text"
         spellCheck={false}
-        placeholder="Search your fav movies"
+        placeholder="Search for movies"
         value={newSearchValue}
         onChange={(event) => {
           setnewSearchValue(event.target.value)
