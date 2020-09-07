@@ -56,50 +56,54 @@ const MovieDetails = () => {
               </span>
             ))}
         </div>
-        <figure className={styles.details__movie_poster}>
-          <img
-            src={
-              movieData.Poster !== 'N/A'
-                ? movieData.Poster
-                : 'https://via.placeholder.com/190x280/2F3240/CECECE/?text=Poster%20N/A'
-            }
-            alt={movieData.Title}
-          />
-        </figure>
-        <div className={styles.movie_plot}>
-          <h3 className={styles.other_details__title}>Plot</h3>
-          <p>{movieData.Plot}</p>
-        </div>
-        <div className={styles.other_details}>
-          <div className={styles.other_details__detail_item}>
-            <h3 className={styles.other_details__title}>Cast</h3>
-            <ul className={styles.detail_item__detail_list}>
-              {movieData.Actors.split(',').map((castMember) => (
-                <li key={castMember} className={styles.detail_list__item}>
-                  {castMember.trim()}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className={styles.other_details__detail_item}>
-            <h3 className={styles.other_details__title}>Genre</h3>
-            <ul className={styles.detail_item__detail_list}>
-              {movieData.Genre.split(',').map((genre) => (
-                <li key={genre} className={styles.detail_list__item}>
-                  {genre.trim()}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className={styles.other_details__detail_item}>
-            <h3 className={styles.other_details__title}>Director</h3>
-            <ul className={styles.detail_item__detail_list}>
-              {movieData.Director.split(',').map((director) => (
-                <li key={director} className={styles.detail_list__item}>
-                  {director.trim()}
-                </li>
-              ))}
-            </ul>
+        <div className={styles.details__main}>
+          <figure className={styles.details__movie_poster}>
+            <img
+              src={
+                movieData.Poster !== 'N/A'
+                  ? movieData.Poster
+                  : 'https://via.placeholder.com/190x280/2F3240/CECECE/?text=Poster%20N/A'
+              }
+              alt={movieData.Title}
+            />
+          </figure>
+          <div className={styles.details__content}>
+            <div className={styles.movie_plot}>
+              <h3 className={styles.other_details__title}>Plot</h3>
+              <p>{movieData.Plot}</p>
+            </div>
+            <div className={styles.other_details}>
+              <div className={styles.other_details__detail_item}>
+                <h3 className={styles.other_details__title}>Cast</h3>
+                <ul className={styles.detail_item__detail_list}>
+                  {movieData.Actors.split(',').map((castMember) => (
+                    <li key={castMember} className={styles.detail_list__item}>
+                      {castMember.trim()}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className={styles.other_details__detail_item}>
+                <h3 className={styles.other_details__title}>Genre</h3>
+                <ul className={styles.detail_item__detail_list}>
+                  {movieData.Genre.split(',').map((genre) => (
+                    <li key={genre} className={styles.detail_list__item}>
+                      {genre.trim()}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className={styles.other_details__detail_item}>
+                <h3 className={styles.other_details__title}>Director</h3>
+                <ul className={styles.detail_item__detail_list}>
+                  {movieData.Director.split(',').map((director) => (
+                    <li key={director} className={styles.detail_list__item}>
+                      {director.trim()}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
