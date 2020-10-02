@@ -66,6 +66,11 @@ const MovieDetails = () => {
               }
               alt={movieData.Title}
             />
+            <FavoriteButton
+              iconClassName={styles.movie__favorite_icon}
+              movie={movieData}
+              favorite={favorites.find((m2) => movieData.imdbID === m2.imdbID) !== undefined}
+            />
           </figure>
           <div className={styles.details__content}>
             <div className={styles.movie_plot}>

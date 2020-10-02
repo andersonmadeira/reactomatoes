@@ -44,10 +44,10 @@
 }
 
 .details__movie_poster {
+  position: relative;
   margin-top: 1.5rem;
 }
 
-.details__movie_poster,
 .details__movie_poster > img {
   width: 100%;
 }
@@ -82,6 +82,7 @@
     margin: 0 auto;
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
   }
 
   .details__content {
