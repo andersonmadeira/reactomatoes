@@ -1,13 +1,56 @@
 .movie__favorite_icon {
+  opacity: 0.8;
   cursor: pointer;
   outline: none;
   border: 0;
   color: #cecece;
   background: transparent;
+  position: absolute;
+  width: 6rem;
+  height: 6rem;
+  top: calc(50% - 3rem);
+  left: calc(50% - 3rem);
+}
+
+@media (min-width: 375px) {
+  .movie__favorite_icon {
+    width: 8rem;
+    height: 8rem;
+    top: calc(50% - 4rem);
+    left: calc(50% - 4rem);
+  }
+}
+
+@media (min-width: 425px) {
+  .movie__favorite_icon {
+    width: 10rem;
+    height: 10rem;
+    top: calc(50% - 5rem);
+    left: calc(50% - 5rem);
+  }
+}
+
+@media (min-width: 430px) {
+  .movie__favorite_icon {
+    width: 15rem;
+    height: 15rem;
+    top: calc(50% - 7.5rem);
+    left: calc(50% - 7.5rem);
+  }
+}
+
+@media (min-width: 768px) {
+  .movie__favorite_icon {
+    width: 6rem;
+    height: 6rem;
+    top: calc(50% - 3rem);
+    left: calc(50% - 3rem);
+  }
 }
 
 .movie__favorite_icon__favorite {
   color: red;
+  opacity: 0.5;
 
   .favorite_icon__icon {
     fill: red;
@@ -20,7 +63,6 @@
 
 .favorite_icon__icon {
   fill: #fff;
-  font-size: 1.8rem;
 }
 
 .favorite_icon__label {

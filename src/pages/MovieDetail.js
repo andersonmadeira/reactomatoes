@@ -6,6 +6,7 @@ import FeedbackMessage from '../components/FeedbackMessage'
 import { StateContext } from '../state'
 import FavoriteButton from '../components/FavoriteButton'
 import { WarningIcon, LoadingIcon } from '../Icons'
+import BackIcon from '../Icons/BackIcon'
 
 const MovieDetails = () => {
   const {
@@ -37,7 +38,9 @@ const MovieDetails = () => {
           className={styles.details__back_button}
           onClick={() => history.goBack()}
         >
-          <span className={styles.details__back}>🡐</span>
+          <span className={styles.details__back}>
+            <BackIcon className={styles.movie_details__back_icon} width="1rem" height="1rem" />
+          </span>
         </button>
         <div className={styles.minor_details}>
           <span className={styles.minor_details__runtime}>{movieData.Runtime}</span>
@@ -52,55 +55,63 @@ const MovieDetails = () => {
                 {rating.Value}
               </span>
             ))}
-          <FavoriteButton movie={movieData} favorite={isFavorite} label="Add to favorites" />
         </div>
-        <div className={styles.movie_plot}>
-          <h3 className={styles.other_details__title}>Plot</h3>
-          <p>{movieData.Plot}</p>
-        </div>
-        <div className={styles.other_details}>
-          <div className={styles.other_details__detail_item}>
-            <h3 className={styles.other_details__title}>Cast</h3>
-            <ul className={styles.detail_item__detail_list}>
-              {movieData.Actors.split(',').map((castMember) => (
-                <li key={castMember} className={styles.detail_list__item}>
-                  {castMember.trim()}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className={styles.other_details__detail_item}>
-            <h3 className={styles.other_details__title}>Genre</h3>
-            <ul className={styles.detail_item__detail_list}>
-              {movieData.Genre.split(',').map((genre) => (
-                <li key={genre} className={styles.detail_list__item}>
-                  {genre.trim()}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className={styles.other_details__detail_item}>
-            <h3 className={styles.other_details__title}>Director</h3>
-            <ul className={styles.detail_item__detail_list}>
-              {movieData.Director.split(',').map((director) => (
-                <li key={director} className={styles.detail_list__item}>
-                  {director.trim()}
-                </li>
-              ))}
-            </ul>
+        <div className={styles.details__main}>
+          <figure className={styles.details__movie_poster}>
+            <img
+              src={
+                movieData.Poster !== 'N/A'
+                  ? movieData.Poster
+                  : 'https://via.placeholder.com/190x280/2F3240/CECECE/?text=Poster%20N/A'
+              }
+              alt={movieData.Title}
+            />
+            <FavoriteButton
+              iconClassName={styles.movie__favorite_icon}
+              movie={movieData}
+              favorite={favorites.find((m2) => movieData.imdbID === m2.imdbID) !== undefined}
+            />
+          </figure>
+          <div className={styles.details__content}>
+            <div className={styles.movie_plot}>
+              <h3 className={styles.other_details__title}>Plot</h3>
+              <p>{movieData.Plot}</p>
+            </div>
+            <div className={styles.other_details}>
+              <div className={styles.other_details__detail_item}>
+                <h3 className={styles.other_details__title}>Cast</h3>
+                <ul className={styles.detail_item__detail_list}>
+                  {movieData.Actors.split(',').map((castMember) => (
+                    <li key={castMember} className={styles.detail_list__item}>
+                      {castMember.trim()}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className={styles.other_details__detail_item}>
+                <h3 className={styles.other_details__title}>Genre</h3>
+                <ul className={styles.detail_item__detail_list}>
+                  {movieData.Genre.split(',').map((genre) => (
+                    <li key={genre} className={styles.detail_list__item}>
+                      {genre.trim()}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className={styles.other_details__detail_item}>
+                <h3 className={styles.other_details__title}>Director</h3>
+                <ul className={styles.detail_item__detail_list}>
+                  {movieData.Director.split(',').map((director) => (
+                    <li key={director} className={styles.detail_list__item}>
+                      {director.trim()}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <figure className={styles.details__movie_poster}>
-        <img
-          src={
-            movieData.Poster !== 'N/A'
-              ? movieData.Poster
-              : 'https://via.placeholder.com/190x280/2F3240/CECECE/?text=Poster%20N/A'
-          }
-          alt={movieData.Title}
-        />
-      </figure>
     </div>
   ) : error ? (
     <FeedbackMessage icon={<WarningIcon />} label={error.message} />

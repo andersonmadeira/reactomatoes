@@ -1,10 +1,10 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
-import styles from './styles/App.module.scss'
 import Header from './components/Header'
 import Home from './pages/Home'
 import Favorites from './pages/Favorites'
 import MovieDetails from './pages/MovieDetail'
+import styles from './styles/App.module.scss'
 
 function App() {
   return (

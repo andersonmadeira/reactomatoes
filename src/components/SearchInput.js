@@ -10,16 +10,14 @@ const SearchInput = ({ value, onChange }) => {
   }, [value])
 
   return (
-    <div className={styles.content__search}>
-      <span className={styles.search__icon}>
-        <SearchIcon width="1.5rem" height="1.5rem" />
-      </span>
+    <div className={styles.search}>
+      <SearchIcon className={styles.search__icon} />
       <input
         data-testid="search-input"
         className={styles.search__input}
         type="text"
         spellCheck={false}
-        placeholder="Search your fav movies"
+        placeholder="Search for movies"
         value={newSearchValue}
         onChange={(event) => {
           setnewSearchValue(event.target.value)
