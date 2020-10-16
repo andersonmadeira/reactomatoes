@@ -5,9 +5,9 @@ const api = axios.create({
 })
 
 export function fetchMovies(search) {
-  return api.get(`/?search=${search}`)
+  return api.get(`/api/v1/movies/?search=${search}`)
 }
 
 export function fetchMovieById(id) {
-  return api.get(`/${id}`)
+  return api.get(`/api/v1/movies/${id}`)
 }
