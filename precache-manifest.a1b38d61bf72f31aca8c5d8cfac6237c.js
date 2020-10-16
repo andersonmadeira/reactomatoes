@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "64edd7f8d2a7c5a76b7957f72e43df36",
+    "revision": "cc80922595090bdb37a0c636b283fd1e",
     "url": "/reactomatoes/index.html"
   },
   {
-    "revision": "32d98c5f59091a7bd276",
+    "revision": "ac1209fbf71b5ead4ac3",
     "url": "/reactomatoes/static/css/main.6fc107de.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/reactomatoes/static/js/2.461bd5e5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "32d98c5f59091a7bd276",
-    "url": "/reactomatoes/static/js/main.3b4def85.chunk.js"
+    "revision": "ac1209fbf71b5ead4ac3",
+    "url": "/reactomatoes/static/js/main.ea89bf91.chunk.js"
   },
   {
     "revision": "a749423cb2d4a11c3ead",
