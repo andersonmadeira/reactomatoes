@@ -17,6 +17,8 @@ jobs:
           
       - name: Build 🔧
         run: npm run-script build
+        env: 
+          REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL }}
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.6.2
