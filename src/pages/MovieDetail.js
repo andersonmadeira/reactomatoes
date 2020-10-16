@@ -17,7 +17,7 @@ const MovieDetails = () => {
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState(null)
   const history = useHistory()
-  const isFavorite = favorites.find((m) => movieId && movieId === m.imdbID) !== undefined
+  // const isFavorite = favorites.find((m) => movieId && movieId === m.imdbID) !== undefined
 
   useEffect(() => {
     if (movieId) {
